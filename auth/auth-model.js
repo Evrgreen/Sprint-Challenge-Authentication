@@ -21,7 +21,8 @@ async function add(user) {
 
 async function findBy(key) {
   try {
-    return await db('users').where(key);
+    const newUser = db('users').where(key);
+    return newUser;
   } catch (error) {
     return error;
   }
